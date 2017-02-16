@@ -28,7 +28,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider{
 		String username = authentication.getName();
 		String password = authentication.getCredentials().toString();
 		
-		System.out.println("username : "+username+" password : "+password);
+		System.out.println("username : "+username+" password.... : "+password);
 		
 		String pass = "$2a$06$urPD/aBOjkuVb.LQ/tjBZet54A1XKGxAJOEhImkFPZEZLYLQnFDY2";
 		if(username.equals("admin") && new BCryptPasswordEncoder().matches(password, pass)){
