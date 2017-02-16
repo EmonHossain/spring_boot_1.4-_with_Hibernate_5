@@ -66,7 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.permitAll();
 		
 		http.authorizeRequests()
-			.antMatchers("/**")
+			.antMatchers("/home/**")
 			.hasAuthority("ROLE_ADMIN")
 			//.antMatchers("/manageEmployee/createUser").hasAnyAuthority(Role.ROLE_ADMIN.name(),Role.ROLE_USER.name())
 			.anyRequest().authenticated();
